@@ -19,3 +19,4 @@ const pushElement = (ele)=>{
 }
 
 console.log(pushElement(10));
+

@@ -6378,3 +6378,31 @@ let res = 20;
 // console.log(Math.round(5/2))
 
 
+
+// Day 22:-
+
+
+const calculateMedian = (arr1)=>{
+  let arr = arr1.sort((a,b)=>{
+    return a-b;
+  })
+
+  let total = 0;
+  if(arr.length%2!=0)
+  {
+      let res = Math.floor(arr.length/2);
+      return arr[res];
+  }else{
+    let res = arr.length/2;
+    for(var i=res-1;i<=res;i++)
+    {
+      total = total + arr[i];
+    }
+    return total/2;
+  }
+}
+
+console.log(calculateMedian([5,3,9,1,7]))  //5
+console.log(calculateMedian([2,4,6,8]))  //5
+console.log(calculateMedian([1,3,5,7,9,11]))  //6
+
