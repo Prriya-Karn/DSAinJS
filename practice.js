@@ -6382,27 +6382,87 @@ let res = 20;
 // Day 22:-
 
 
-const calculateMedian = (arr1)=>{
-  let arr = arr1.sort((a,b)=>{
-    return a-b;
-  })
+// const calculateMedian = (arr1)=>{
+//   let arr = arr1.sort((a,b)=>{
+//     return a-b;
+//   })
 
-  let total = 0;
-  if(arr.length%2!=0)
-  {
-      let res = Math.floor(arr.length/2);
-      return arr[res];
-  }else{
-    let res = arr.length/2;
-    for(var i=res-1;i<=res;i++)
-    {
-      total = total + arr[i];
+//   let total = 0;
+//   if(arr.length%2!=0)
+//   {
+//       let res = Math.floor(arr.length/2);
+//       return arr[res];
+//   }else{
+//     let res = arr.length/2;
+//     for(var i=res-1;i<=res;i++)
+//     {
+//       total = total + arr[i];
+//     }
+//     return total/2;
+//   }
+// }
+
+// console.log(calculateMedian([5,3,9,1,7]))  //5
+// console.log(calculateMedian([2,4,6,8]))  //5
+// console.log(calculateMedian([1,3,5,7,9,11]))  //6
+
+
+// // Day 23:-
+
+// const countElements = (arr)=>{
+//   let count = 1;
+//   var res = {};
+//   for(ele of arr){
+//     if(res[ele] === undefined){
+//       res[ele] = count;
+//     }else{
+//       res[ele] = res[ele] + count;
+//     }
+    
+//   }
+//   return res;
+  
+// }
+
+// console.log(countElements([1,2,2,3,1,4,2]));
+
+
+// const obj = {};
+// obj[1] = 20;
+// console.log(obj[1])
+
+
+// const obje = {};
+// obje[1] = 10;
+// obje[2] = 30;
+// console.log(obje[1])     //we access the element here
+// console.log(undefined||0)
+// console.log(undefined===0)
+// or
+
+
+
+// Day 24:-
+
+const findMode = (arr)=>{
+  var count = 1;
+  var res = {};
+  var max = 0;
+  var mode;
+  for(ele of arr){
+    if(res[ele] === undefined){
+      res[ele] = count;
+    }else{
+      res[ele] = res[ele] + count
     }
-    return total/2;
+//{ '1': 2, '2': 3, '3': 1, '4': 1 }
+    if(res[ele]>max){
+      max = res[ele]
+      mode = ele;
+    }
   }
+
+  return mode;
 }
 
-console.log(calculateMedian([5,3,9,1,7]))  //5
-console.log(calculateMedian([2,4,6,8]))  //5
-console.log(calculateMedian([1,3,5,7,9,11]))  //6
-
+console.log(findMode([1,2,2,3,1,4,2]))  //2
