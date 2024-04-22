@@ -6466,3 +6466,75 @@ const findMode = (arr)=>{
 }
 
 console.log(findMode([1,2,2,3,1,4,2]))  //2
+
+console.log("priya")
+
+
+
+// Day 25:- factorial of number using recursion
+
+// without recursion:-
+
+// const fact = (num)=>{
+//     for(var i=num-1; i>0;i--)
+//     {
+//         num = num *i;
+//     }
+//     return num;
+// }
+// console.log(fact(3));
+
+// const fact = (num)=>{
+//   if(num===1){      //base case
+//       return 1;    
+//   }else{
+//       return num * fact(num-1)         //function call itself (recursive case)
+//   }
+// }
+
+// console.log(fact(5));
+
+
+
+
+
+// Day 26:-
+// without recursion
+
+// const fibonacci = (num)=>{
+//     var a = 0;
+//      var b = 1;
+    
+//      var c;
+// var i = 0;
+//      while(i<=num-2){
+//         c = a+b; 
+//         a=b;
+//         b=c
+//         i+=1;
+        
+//      }
+// return c
+// }
+
+// console.log(fibonacci(3))
+
+
+
+// with recursion:-  0 1 1 2 3 5 8-------------
+// f(n) = f(n-1) + f(n-2)   //formula
+// fibonacci(3) = f(2) + f(1)
+
+
+// const fibonacci = (num)=>{
+     
+//     if(num<=1){
+//         return num;
+//     }else{
+//         return fibonacci(num-1) + fibonacci(num-2)
+//     }
+// }
+// console.log(fibonacci(0))  //0
+// console.log(fibonacci(1)) // 1
+// console.log(fibonacci(3)) // 2
+// console.log(fibonacci(5))  // 5
