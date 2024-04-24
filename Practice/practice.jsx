@@ -6538,3 +6538,78 @@ console.log("priya")
 // console.log(fibonacci(1)) // 1
 // console.log(fibonacci(3)) // 2
 // console.log(fibonacci(5))  // 5
+
+
+
+
+// Day 29:-
+
+// var res = [1,2];
+// res = res.push("priya");
+// console.log(res)
+// // push() returns the new length of the array, not the modified array itself. 
+
+
+// const numberRange = (a,b,res=[])=>{
+//   for(var i=a;i<=b;i++){
+//       res.push(i);
+//   }
+//   return res;
+// }
+
+
+// console.log(numberRange(0,5)) // [0,1,2,3,4,5]
+// console.log(numberRange(3,7)) // [3,4,5,6,7]
+// console.log(numberRange(-2,2))
+
+
+
+// using recursion:-
+// const numberRange = (a,b,res=[])=>{
+//     var i = a;
+//     if(i==b){
+//         res.push(i)
+//         return res;
+//     }else{
+//         res.push(i);
+//         return numberRange(i+1,b,res);
+//     }
+      
+// }
+
+
+// console.log(numberRange(0,5)) // [0,1,2,3,4,5]
+// console.log(numberRange(3,7)) // [3,4,5,6,7]
+// console.log(numberRange(-2,2))
+
+
+
+
+// Day 28:-
+
+
+const truncateString = (s,k)=>{
+  let arr = s.split("");
+  let res = [];
+  if(k<=0){
+      return s;
+  }
+  // if(s.length>k){
+  //     for(var i=0;i<k;i++){
+  //         res.push(arr[i]);
+  //     }
+  // }
+
+  // or
+
+  if(s.length>k){
+      return s.slice(0,k).concat("...")
+  }
+  
+
+  return `${res.join("")}...`;
+}
+
+console.log(truncateString("hi my name is priya how are you all",8)); // "hi my na..."
+console.log(truncateString("A-tisket a-tasket",8));
+console.log(truncateString("A-tisket a-tasket",0));
