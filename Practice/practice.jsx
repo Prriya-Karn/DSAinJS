@@ -6613,3 +6613,25 @@ const truncateString = (s,k)=>{
 console.log(truncateString("hi my name is priya how are you all",8)); // "hi my na..."
 console.log(truncateString("A-tisket a-tasket",8));
 console.log(truncateString("A-tisket a-tasket",0));
+
+
+// Day 27:- repeated string;
+
+const repeatedString = (s,k)=>{
+  //     var res = "";
+  //     if(k<=0){
+  //         return s;
+  //     }else{
+  //     for(var i=0;i<k;i++){
+  //         res = res + s;
+  //     }
+  // }
+  
+  return s.repeat(k);
+      return res;
+  }
+  
+  
+  
+  console.log(repeatedString("abc",5));
+  console.log(repeatedString("abc",0));
