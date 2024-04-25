@@ -147,3 +147,36 @@
 // console.log(res)
 
 
+// const res = "priya";
+// console.log(res.includes("a")
+// )
+
+// console.log(Math.round(3/2))
+// console.log(Math.floor(3/2))
+// console.log(Math.ceil(3/2))
+
+// let s = "priya"
+// var fres= 0;
+// if(s.length%2!=0){
+//     fres = (s.length)+1;
+//    }
+
+//    console.log(fres.length)
+
+
+// // let s = "abab";
+// // console.log(s.slice(0,2) === s.slice(2,4))
+// let s = "aba";
+// console.log(s.slice(0,2) === s.slice(2,3))
+// // console.log(s.slice(0,res.length) === s.slice(res.length,s.length))
+
+// console.log(s.substring(1,2))
+
+
+let s = "abab"
+
+let repeat = s.repeat(2) //abaaba //abababab
+
+let slice = repeat.slice(1,-1);  //baab  //bababa
+let check = slice.includes(s);
+console.log(slice)

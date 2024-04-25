@@ -6588,50 +6588,50 @@ console.log("priya")
 // Day 28:-
 
 
-const truncateString = (s,k)=>{
-  let arr = s.split("");
-  let res = [];
-  if(k<=0){
-      return s;
-  }
-  // if(s.length>k){
-  //     for(var i=0;i<k;i++){
-  //         res.push(arr[i]);
-  //     }
-  // }
+// const truncateString = (s,k)=>{
+//   let arr = s.split("");
+//   let res = [];
+//   if(k<=0){
+//       return s;
+//   }
+//   // if(s.length>k){
+//   //     for(var i=0;i<k;i++){
+//   //         res.push(arr[i]);
+//   //     }
+//   // }
 
-  // or
+//   // or
 
-  if(s.length>k){
-      return s.slice(0,k).concat("...")
-  }
+//   if(s.length>k){
+//       return s.slice(0,k).concat("...")
+//   }
   
 
-  return `${res.join("")}...`;
-}
+//   return `${res.join("")}...`;
+// }
 
-console.log(truncateString("hi my name is priya how are you all",8)); // "hi my na..."
-console.log(truncateString("A-tisket a-tasket",8));
-console.log(truncateString("A-tisket a-tasket",0));
+// console.log(truncateString("hi my name is priya how are you all",8)); // "hi my na..."
+// console.log(truncateString("A-tisket a-tasket",8));
+// console.log(truncateString("A-tisket a-tasket",0));
 
 
-// Day 27:- repeated string;
+// // Day 27:- repeated string;
 
-const repeatedString = (s,k)=>{
-  //     var res = "";
-  //     if(k<=0){
-  //         return s;
-  //     }else{
-  //     for(var i=0;i<k;i++){
-  //         res = res + s;
-  //     }
-  // }
+// const repeatedString = (s,k)=>{
+//   //     var res = "";
+//   //     if(k<=0){
+//   //         return s;
+//   //     }else{
+//   //     for(var i=0;i<k;i++){
+//   //         res = res + s;
+//   //     }
+//   // }
   
-  return s.repeat(k);
-      return res;
-  }
+//   return s.repeat(k);
+//       return res;
+//   }
   
   
   
-  console.log(repeatedString("abc",5));
-  console.log(repeatedString("abc",0));
+//   console.log(repeatedString("abc",5));
+//   console.log(repeatedString("abc",0));
