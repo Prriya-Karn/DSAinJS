@@ -6635,3 +6635,45 @@ console.log("priya")
   
 //   console.log(repeatedString("abc",5));
 //   console.log(repeatedString("abc",0));
+
+
+
+
+
+// // Day 31:-  
+// // passcontain[at least(one lowercase,one Uppercase,length(greater than 8),
+// // return true else false];
+// //numeric
+
+// const simplePasswordValidator = (pass)=>{
+// //  a=97,z=122; A = 65, Z = 90;
+// // var res = pass.split("");
+// var hasUpperCase = false;
+// var hasLowerCase = false;
+// var hasNumber = false;
+
+// for(ele of pass){
+//    if(ele.charCodeAt(0)>=97&&ele.charCodeAt(0)<=122){
+//       hasLowerCase = true;
+//    }
+//    if(ele.charCodeAt(0)>=65 && ele.charCodeAt(0)<=90){
+//       hasUpperCase = true;
+//    }
+//    if(!isNaN(Number(ele))){
+//       hasNumber = true;
+//    }
+// }
+
+// if(!hasLowerCase || !hasUpperCase || !hasNumber || pass.length<8){
+//    return false;
+// }
+// // else{
+// //    return true;
+// // }
+
+// return true;
+// }
+
+// console.log(simplePasswordValidator("fjdhfkjaklklf")); //false
+// console.log(simplePasswordValidator("P18priyaa")); //true
+
