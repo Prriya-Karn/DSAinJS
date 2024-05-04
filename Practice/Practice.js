@@ -6677,3 +6677,9 @@ console.log("priya")
 // console.log(simplePasswordValidator("fjdhfkjaklklf")); //false
 // console.log(simplePasswordValidator("P18priyaa")); //true
 
+// Day 37:-
+
+// const calculateSimpleInterest = (p,r,t)=>{
+//    return `SI is ${Math.round((p*r*t)/100)}`
+// }
+// console.log(calculateSimpleInterest(1000,5,3));

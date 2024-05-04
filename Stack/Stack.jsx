@@ -1,6 +1,8 @@
 
 // //---------------------- Stack start-------------------------------------
 
+const { object } = require("prop-types");
+
 // // push operation :- push the element on the top of the stack
 // // var stack = [];
 // // const pushNum = (num)=>{
@@ -243,3 +245,38 @@
 
 
 
+// Day 36:-
+// ["name","priya karn","age",24,"city","delhi"];
+
+// const obj = {
+//    name  : "priya",
+//    age : 24,
+//    city : "delhi"
+// };
+
+// let res = [];
+// for(key in obj){
+//    res.push(key,obj[key])
+// }
+// console.log(res)   //[ 'name', 'priya karn', 'age', 24, 'city', 'delhi'];
+
+// or can be use entries();
+
+ 
+ 
+//  const entries = Object.entries(obj)
+//  console.log(entries);
+//  console.log(entries.flat())
+
+// [ [ 'name', 'priya' ], [ 'age', 24 ], [ 'city', 'delhi' ] ]
+// let obj1 = {
+
+// }
+// for(var i=0;i<entries.length;i++){
+//   obj1[entries[i][0]] = entries[i][1];
+// }
+// console.log(obj1);
+
+// or use fromEntries();
+
+// console.log(Object.fromEntries(entries))
