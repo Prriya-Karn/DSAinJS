@@ -290,3 +290,22 @@
 // }
 
 // console.log(sortArray([400,3900,0,-2]));
+
+
+
+
+const palindrome = (name)=>{
+    const res = name.split("").reverse();
+    if(res.join("")===name){
+        return true
+    }else{
+        return false
+    }
+    
+  }
+  
+  console.log(palindrome("priya"));
+
+
+
+  

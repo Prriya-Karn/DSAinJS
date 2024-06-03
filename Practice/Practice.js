@@ -1601,6 +1601,8 @@ const months = ['Jan','march','April','June','July'];
 // if(fruits.indexOf('mango') == fruits[0]){
 //     document.write('same')
 // }
+
+
 //PROPERTY ACCESS
 // let str = "HELLO PRIYA";
 // document.write(str[1])
@@ -1620,11 +1622,15 @@ const months = ['Jan','march','April','June','July'];
 // var txt = "a,b,c,d,e";
 // document.write(txt.split(""));
 // note:- india is 5 hours and 30 minutes ahead of GMT+0530(INDIA STANDARD TIME)
+
+
 // // GMT(Greenwich Mean Time)
 // GMT means all over world time will be work properly
-// date and time in javascript
+
+
+//---------------------------- date and time in javascript-----------------------------
 // new Date(year,month,day,hours,minutes,seconds,milliseconds)
-//new date is a constructor
+// new date is a constructor
 // let currDate = new Date();
 // document.write(currDate)
 // document.write("<br>");
@@ -6683,3 +6689,19 @@ console.log("priya")
 //    return `SI is ${Math.round((p*r*t)/100)}`
 // }
 // console.log(calculateSimpleInterest(1000,5,3));
+// console.log("hi")
+
+
+
+const palindrome = (name)=>{
+  const res = name.split("");
+  // if(res.join()===name){
+  //   return true
+  // }else{
+  //   return false
+  // }
+
+  return res.join()
+}
+
+console.log(palindrome("racecar"));
