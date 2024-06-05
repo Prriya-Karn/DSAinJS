@@ -273,7 +273,7 @@
 #--------------------------------- List(mutable) start:------------------------------
 
 # slicing, indexing, count, how to add element(append,insert), sort()
-# how to delete element(del,pop,remove), how to edit ele,
+# how to delete element(del,pop,remove), how to edit ele, comparison, repetition,concat
 
 
 # methods are available inside the list object and can be access
@@ -293,14 +293,14 @@
 # print(l1[0:3])
 # print(l1[0:5:2])
 # print(l1[::-1])
-# print(l1[0:6:-1])
+# # print(l1[0:6:-1])
 
-l1 = [10,20,20,30,40,50,60,70,80]
-# print(l1.count(20))
-print(min(l1))
-print(max(l1))
+# l1 = [10,20,20,30,40,50,60,70,80]
+# # print(l1.count(20))
+# print(min(l1))
+# print(max(l1))
 
-print(10>80)
+# print(10>80)
 
 
 #How to delete element
@@ -313,13 +313,24 @@ l1 = [10,20,30,40,50,60,70,80]
 
 #How to delete 20 in the list using for loop
 
-# l1 = [10,20,30,40,50,60,70,80]
+l1 = [10,20,30,40,50,60,70,80]
 
-# # print(20 in l1)
-# for i in l1:
-#         if(i==20):
-#             l1.remove(i)
-#         print(i)
+# print(l1[1])
+# from backward direction:-
+# for i in range(len(l1)-1,0,-1):
+#    if l1[i] == 20:
+#       del l1[i]
+       
+# print(l1)
+
+# # or
+
+# res = []
+# for i in range(0,len(l1)):
+#     if l1[i] != 20:
+#         res.append(l1[i])
+
+# print(res)
 
 
 
@@ -376,68 +387,510 @@ l1 = [10,20,30,40,50,60,70,80]
 # print(sum(l1))
 
 
-l1 = [20,30,10,5,4,2]
-print(sorted(l1))
-print(sum(l1))
+# l1 = [20,30,10,5,4,2]
+# sorted(l1)
+# print("sorted", l1)
 
-print(len(l1))
+# # print(sum(l1))
 
-
-# comparison operator
-
-l1 = [1,2,3]
-l2 = [2,3,1]
-l3 = [1,2,3,4,5]
-l4 = [1,2,3]  
-
-# print(l1==l2)
-# print(l1==l3)
-print(l1>l3)
-print(l1<l3)
-# print(l1==l4)
-
-print(l1>l2)
-print(l1>=l2)
-print(l1>l4)
-print(l1>=l4)
+# # print(len(l1))
 
 
+# # comparison operator
 
-#concatenation operator
+# l1 = [1,2,3]
+# l2 = [2,3,1]
+# l3 = [1,2,3,4,5]
+# l4 = [1,2,3]  
 
-l1 = [1,2,3]
-l2 = [2,3,1]
-l3 = [1,2,3,4,5]
-l4 = [1,2,3]  
+# # print(l1==l2)
+# # print(l1==l3)
+# print(l1>l3)
+# print(l1<l3)
+# # print(l1==l4)
 
-print(l1+l3)
-l1+=l2
-print(l1)
-
-
-# Repetition operator
-l1 = [2,3,1]
-print(l1*2)
+# print(l1>l2)
+# print(l1>=l2)
+# print(l1>l4)
+# print(l1>=l4)
 
 
-#sort()
 
-# l1 = [20,1,30,8,8]
-# l1.sort(reverse=True)
+# #concatenation operator
+
+# l1 = [1,2,3]
+# l2 = [2,3,1]
+# l3 = [1,2,3,4,5]
+# l4 = [1,2,3]  
+
+# print(l1+l3)
+# l1+=l2
 # print(l1)
 
-# list of list
 
-# l1 = [[10,20,30],["priya","ankita","himmu"]]
-# print(l1[-1][0])
+# # Repetition operator
+# l1 = [2,3,1]
+# print(l1*2)
 
-# l1 = [[1,3,5],[2,1,8],[5,4,4]]
 
-# for i in l1:
-#     for j in i:
-#         print(j,end=" ")
-#     print()
+# #sort()
 
+# # l1 = [20,1,30,8,8]
+# # l1.sort(reverse=True)
+# # print(l1)
+
+# # list of list
+
+# # l1 = [[10,20,30],["priya","ankita","himmu"]]
+# # print(l1[-1][0])
+
+# # l1 = [[1,3,5],[2,1,8],[5,4,4]]
+
+# # for i in l1:
+# #     for j in i:
+# #         print(j,end=" ")
+# #     print()
+
+
+
+# # -----------------------------------list comprehension-----------------------------
+
+# # l4 = [x*3 for x in range(5)]
+# # print(l4)
+
+# # # or
+
+# # l4 = range(5)
+
+# # for x in list(l4):
+# #     print(x*3)
+
+
+
+
+
+
+
+# #------------------------------------ range------------------------------
+
+# #immutable, can contain only int type value, range create AP with same common difference
+# print("range")
+# # r = range(0,5,2)
+# # print(list(r))
+
+# # for i in range(0,5):
+# #     print(i)
+
+
+# # for i in range(4):
+# #     print(i)
+
+
+# # for i in range(5,1,-1):
+# #     print(i)
+
+# # #    5, 5-1=4, 4-1=3, 3-1 =2=>   5,4,3,2
+
+
+
+
+# # for i in range(5,1,1):
+# #     print(i)
+
+# # # 5, 5+1=6, 6+1=7 so empty range object
+
+
+# # for i in range(-10):
+# #     print(i)
+
+# # # 0, 0+1:1, 1+1:2, 2+1:3  
+
+
+# # for i in range(2,10,2):
+# #     print(i)
+
+# # # 2, 2+2:4, 4+2:6
+
+
+
+
+
+
+#------------------------------------------- tuple------------------------------------
+
+# slicing, indexing, count, 
+# how to add element(append,insert), not support because tuple is immutable
+# how to delete element(del,pop,remove) not support in tuple, 
+# how to edit ele,not support (tuple is immutable)
+
+# comparison, repetition,concat
+# sort() not support
+
+
+# t0 = ()
+# print(type(t0))
+# t1 = (10,20,30)
+# print(t1)
+
+# t2 = (10)   #not a tuple
+# print(type(t2))
+
+# t2 = (10,)  # now it is a tuple
+# print(type(t2))
+
+# l = [10,20,40]
+
+# t3 = 10,20,30
+# print(type(t3))
+
+# print(t3)
+# # for i in range(0,len(t3)):
+# #     print(t3[i])
+
+# print(t3[0:3:2])
+# print(sum(t3))
+
+# print(min(t3))
+
+# print(t3.isalnum())
+
+# t3[0] = "ankita"      #cannot edit the element
+# t3[1] = "himanshu"
+# print(t3)
+# print(t3.count(10))
+
+# del l[0]       #not support delete in tuple
+# print(l)
+
+# t3.remove(20)
+# print(t3)
+
+# t3.pop()
+# print(t3)
+
+
+
+# t1 = (1,2,3,4)
+# t2 = 3,4,5
+
+# print(t1+t2)
+# print(t1>t2)
+
+# print(t2>t1)
+
+
+# res  = tuple([x*3 for x in t1])
+# print(res)
+
+
+# Set class is mutable, set is not a sequence, then slicing operator not work, 
+# index not work
+# set cannot have duplicate value
+# concat and repetition not support
+
+
+# #set object methods:- position not matter, anywhere data add, remove, update etc.
+# add(), update(),discard,remove,intersection,union,clear,is subset, is superset,pop
+
+
+
+# s1 = {1,2,2,3,7,5,2,"priya"}
+# s2 = {100,"priya"}
+# s3 = {1}
+# # print(s1[0]) not work
+
+# s1[0] = 20     # not support
+
+
+# for i in s1:
+#     print(i)
+
+# s1.add(100)
+# s1.add("priya")
+# print(s1)
+
+# s1.remove(2)
+# print(s1)
+
+# print(s1.union(s2))
+# print(s1.intersection(s2))
+# print(s2.intersection(s3))
+
+
+# s1.update({18})
+# print(s1)
+
+# def sum(a,b):
+#     print(a+b)
+
+# sum(2,3)
+
+
+print("oop start")
+
+# class Test:
+#     #class object variable create
+#     x = 5
+#     y = 3
+
+#     #instance method
+#     def f1(self):
+#         print("Hello")
+#         Test.z = "priya karn"
+#         print(Test.z)
+
+#     @staticmethod
+#     def f2():
+#         print("priya")
+#         Test.d = "ankita karn"
+#         print(Test.d)
+
+#     @classmethod
+#     def f3(cls):
+#         print("hi class")
+#         Test.h = "himanshu karn"
+#         print(Test.h)
+
+# #instance object variable create:-
+#     def __init__(self,a):          # self = t1   now self is the instance object and a=3 object var access with the help of dot
+#         self.a = a
+
+
+
+    
+        
+        
+    
+
+# t1 = Test(30)       # __init__(t1,3) automatically call and pass
+# t1.f1()  # f1(t1)
+# print(t1.a)
+
+
+# t1.b = 100
+# print("instance object variable create",t1.b)
+
+# t1.f2()
+# t1.f3()   #f3(Test) automatically pass Test class
+
+# print(t1.x)
+# print("class object variable access",Test.x)
+# print(t1.y)
+
+# print(Test.h)
+
+# Test.f2()
+# Test.f3()    # f3(Test) class object pass automatically 
+
+# Test.f1()   # error
+
+# Test.x4 = 200    # class object variable create and access
+# print(Test.x4)
+
+
+# class Person:
+#     weight = 50
+#     height = 182
+
+
+#     def running(self):
+#         print("running")
+
+    
+#     @staticmethod
+#     def walking():
+#         print("walking")
+
+#     @classmethod
+#     def smiling(cls,dob):
+#         print("smiling")
+#         cls.dob = dob
+#         print(cls.dob)
+
+#     def __init__(self,a):
+#         self.a = a
+        
+
+# priya = Person(20)
+# print(priya.a)
+
+# priya.running()    # running(priya) instance object pass
+# priya.walking()
+# priya.smiling(18)    # class method call and smiling(priya) instance object pass automatically
+
+
+
+
+
+# 1. Write a python program to create a user 
+# class with 3 properties : name, age, email.
+
+# class user:
+#     def __init__(self,name,age,email):
+#         self.name = name
+#         self.age = age
+#         self.email = email
+
+# #instance method defination
+#     def data(self,Name,Age,Email):
+#         self.n = Name
+#         self.a = Age
+#         self.e = Email
+
+
+#     @classmethod
+#     def classData(cls,name):
+#         cls.c = name
+
+        
+        
+
+
+
+
+# Priyadata = user("Priya Karn",24,"priya.karn.2000@gmail.com")    # init(Priyadata) automatically call and pass instance object
+
+# print(Priyadata.name,Priyadata.age, Priyadata.email)
+
+# Priyadata.data("p",2,"opjkjakfs")
+# print(Priyadata.n,Priyadata.e,Priyadata.a)
+
+# Priyadata.classData("priya")
+# print(Priyadata.c)
+
+
+
+# 2. Write a python program to create a user class with a method to greet the user.
+
+# class user:
+#     @staticmethod
+#     def greetUser(name):
+#         user.a = "ankita" 
+#         # print("Good Morning",name)
+#         return name
+    
+
+       
+
+
+
+# u = user()
+
+# print("Good Morning",u.greetUser(input("enter your name:")))
+# print( user.a)
+
+
+
+
+
+# # 3. Write a python program to create 2 objects of the user class and assign different
+# # values.
+
+# class user:
+#     def __init__(self,name,dob):
+#         self.n = name
+#         self.d = dob
+
+
+
+# priya = user("priya",18)
+# ankita = user('ankita',14)
+# himanshu = user('''himanshu''',7)
+# print(priya.n)
+# print(ankita.d)
+# print(himanshu.n)
+
+
+
+
+# 4. Write a python program to init default values for
+#  user object using __init__ method.
+
+# output:- User with defaults: Default Name, 0, default@example.com
+
+# class user:
+#     def __init__(self,defaultName,id,email):
+#         self.defaultName = defaultName
+#         self.id = id
+#         self.email = email
+
+
+# u = user("Default Name",0,"default@example.com")
+# print("user with defaults:{u.defaultName},{u.id},{u.email}")
+
+
+
+
+
+
+
+# 5. Write a python program to delete the age property of the user.
+
+# class user:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+        
+        
+
+
+
+# u = user("priya",24)
+# del u.age
+
+# print(u.age)
+
+
+
+# 6. Write a python program to create 3 user objects and find the youngest of all.
+# Uses f-strings to correctly format the output.
+
+# class user:
+#     def __init__(self,age):
+#         self.age = age
+       
+
+
+# priya  = user(24)
+# ankita = user(20)
+# himanshu = user(16)
+
+# if(priya.age<ankita.age and priya.age<himanshu.age):
+#     print(f"{priya.age} is younger")
+# elif(ankita.age<priya.age and ankita.age<himanshu.age):
+#     print(f"{ankita.age} is younger")
+# else:
+#     print(f"{himanshu.age} is younger")
+
+
+
+
+# 7. Write a python program to create a Laptop class with 4 attributes 
+# (brand, ram, cpu, hdd) and 2 methods
+# (showConfig() to print the values, __init__() to initialize the values).
+
+
+
+
+
+# 9. Write a python program to create a School class and 3 instance variables
+#  and 1 class variable.
+
+
+class School:
+    @classmethod
+    def classVariable(cls,x):
+        cls.x = x
+
+    def instanceVariable(self,a,b,c):
+        self.a = a
+        self.b = b
+        self.c = c
+
+
+getdata = School()
+getdata.classVariable(5)
+getdata.instanceVariable(2,3,4)
 
 
 
