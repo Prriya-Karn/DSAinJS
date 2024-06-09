@@ -877,20 +877,159 @@ print("oop start")
 #  and 1 class variable.
 
 
-class School:
-    @classmethod
-    def classVariable(cls,x):
-        cls.x = x
+# class School:
+#     @classmethod
+#     def classVariable(cls,x):
+#         cls.x = x
+#         print(cls.x)
 
-    def instanceVariable(self,a,b,c):
-        self.a = a
-        self.b = b
-        self.c = c
+#     def __init__(self,a,b,c):
+#         self.a = a
+#         self.b = b
+#         self.c = c
 
-
-getdata = School()
-getdata.classVariable(5)
-getdata.instanceVariable(2,3,4)
-
+#     def instanceVariable(self):
+#         print(self.a,self.b,self.c)
 
 
+# getdata = School(2,3,4)
+# School.classVariable(5)   # passs class object classVariable(School) automatically
+# getdata.instanceVariable()
+
+
+
+
+
+
+# 8. WRT 7th Question, create 3 Laptop objects and add them to the list in the sorted
+#    order based on the ram size.
+
+
+
+
+# 10. Define a class Employee with instance object variables empid, name, salary. Write
+# __init__() method in the class to initialize instance object variables. 
+# Also define instance methods to input fields and display field values
+
+
+# class Employee:
+#     def __init__(self,empid,name,salary):
+#         self.name = name
+#         self.empid = empid
+#         self.salary = salary
+
+#     def instanceMethod(self):
+#         print(f"employee name is :- {self.name}")
+#         print(f"{self.name} salary is :- self.salary")
+#         print(f"{self.name} id is :- {self.empid}")
+    
+
+# e = Employee(input("enter the empid: "),input("enter name: "),input("enter salary"))
+# e.instanceMethod()
+
+
+
+
+# Question 1: Bank Account Class:-
+
+'''account_number: A unique identifier for the account.
+holder_name: The name of the account holder.
+balance: The current balance of the account.
+deposit(amount): A method to deposit a specified amount into the account.
+withdraw(amount): A method to withdraw a specified amount from the account,
+ if sufficient balance is available.'''
+
+# class BankAccount:
+# # initialize isinstance object variable and create instance object variable
+#     def __init__(self,account_num,holder_name,balance=0):
+#         self.account_num = account_num
+#         self.holder_name = holder_name
+#         self.balance = balance
+    
+#     def deposit(self,dep):
+#         self.dep = dep
+#         self.balance = self.balance + self.dep
+
+#     def withdraw(self,draw):
+#         self.draw = draw
+#         if(self.draw <= self.balance):
+#             self.balance -= self.draw
+#         else:
+#             self.balance = "cant with draw bank balance is 0"
+        
+# # init method
+#     def displayData(self):
+#         print(f'account number is :- {self.account_num}')
+#         print(f"holder name is:- {self.holder_name}")
+#         print(f"deposit amount is :- {self.dep}")
+#         print(f"withdraw amount is :- {self.draw}")
+#         print(f"bank balance is :- {self.balance}")
+
+
+# data = BankAccount(12345678,"Priya karn",0)
+# data.deposit(200)
+# data.withdraw(100)
+# data.displayData()
+
+
+
+
+'''
+Question 2: Rectangle Class
+Create a Rectangle class with the following properties and methods:
+
+length: The length of the rectangle.
+width: The width of the rectangle.
+area(): A method to calculate and return the area of the rectangle.
+perimeter(): A method to calculate and return the perimeter of the rectangle.'''
+
+# class Rectangle:
+#     def __init__(self,length,width):
+#         self.length = length
+#         self.width = width
+    
+#     def area(self):
+#         print(f"Area of rectangle is :- {self.length * self.width}")
+    
+#     def perimeter(self):
+#         print(f'perimeter is :- {2*(self.length+self.width)}')
+
+# rectData = Rectangle(2,3)
+# rectData.perimeter()
+# rectData.area()
+
+'''
+Question 3: Library Book Class
+Create a Book class with the following properties and methods:
+
+title: The title of the book.
+author: The author of the book.
+isbn: The ISBN number of the book.
+availability: A boolean indicating whether the book is available for borrowing.
+borrow(): A method to mark the book as borrowed (set availability to False).
+return_book(): A method to mark the book as returned (set availability to True).
+'''
+
+class LibraryBook:
+    def __init__(self,title,author,isbn):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+
+    def availableBook(self,bool):
+        self.bool = bool
+        if(self.bool==True):
+            print(f"book borrow title of the book is :- {self.title} author name is : {self.author} ")
+            self.bool = False
+    
+    def returnBook(self,ret):
+        self.ret = ret
+        print("return the book")
+
+    
+
+ 
+libdata = LibraryBook("titanic","priya karn",18)
+
+libdata.availableBook(True)
+libdata.returnBook(True)
