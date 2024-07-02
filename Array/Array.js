@@ -15,21 +15,21 @@
 //     const newEle = 70;
 //     arr.splice(p,0,newEle)  //one line
 
-    // for(var i=arr.length-1;i>0;i--){
-    //     var res = arr[i];
-    
-    //     if(i>=p){
-    //         i=i+1;
-    //         arr[i]=res;
-    //     }else{
-    //         i=i+1;
-    //         arr[i]=  newEle;
-    
-    //     }
-    //     i=i-1
-    
-       
-    // }
+// for(var i=arr.length-1;i>0;i--){
+//     var res = arr[i];
+
+//     if(i>=p){
+//         i=i+1;
+//         arr[i]=res;
+//     }else{
+//         i=i+1;
+//         arr[i]=  newEle;
+
+//     }
+//     i=i-1
+
+
+// }
 
 
 // return arr;    
@@ -53,9 +53,9 @@
 //             arr[i] = newEle
 //         }
 //     }
-    
 
-   
+
+
 // }
 
 // console.log(arr)
@@ -120,10 +120,10 @@
 //     {
 //         if(arr[i]== item){
 //             res = true;
-            
+
 //         }else{
 //             res;
-           
+
 //         }
 //         if(res === true)
 //         break;
@@ -134,7 +134,7 @@
 //     else{
 //         return false;
 //     }
-    
+
 // }
 
 // console.log(SeaarchElem([10,20,30,40,50,60]))
@@ -170,7 +170,7 @@
 //         }
 //     }
 //     return arr1;
-    
+
 // }
 
 
@@ -184,7 +184,7 @@
 //     var res = [];
 //     for(var i=0;i<arr2.length;i++){
 //        res[i] = arr2[i]
-       
+
 //     }
 // // res = [17,20,30,50,70];
 
@@ -192,7 +192,7 @@
 //          res[res.length] = arr1[i]
 //      }
 //    return res;
-    
+
 // }
 
 
@@ -203,7 +203,7 @@
 // const mergeTwoArray = (arr1,arr2)=>{
 //     const res = [...arr1, ...arr2]
 //     return res;
-    
+
 // }
 
 
@@ -216,7 +216,7 @@
 
 // const reverseArray = (arr)=>{
 //     var res = [];
-    
+
 //     for(var i=arr.length-1;i>=0;i--){
 //         for(var j=res.length;j>=0;j--){
 //             res[j] = arr[i]
@@ -249,28 +249,28 @@
 // const sortArray = (arr)=>{
 //     let temp = 0;
 
-    // for(var i=0;i<arr.length;i++)
-    // {
-    //     let a = 0;
-    //     for(var j=1;j<arr.length;j++)
-    //     {
+// for(var i=0;i<arr.length;i++)
+// {
+//     let a = 0;
+//     for(var j=1;j<arr.length;j++)
+//     {
 
-    //         if(arr[a]>arr[j]){
-    //             temp = arr[a];
-    //             arr[a] = arr[j]
-    //             arr[j] = temp;
-    //         }
-    //         a+=1;
-    //     }
-        
-    // }
+//         if(arr[a]>arr[j]){
+//             temp = arr[a];
+//             arr[a] = arr[j]
+//             arr[j] = temp;
+//         }
+//         a+=1;
+//     }
+
+// }
 
 // or
 
 
 //     for(var i=0;i<arr.length;i++)
 //     {
-       
+
 //         for(var j=0;j<arr.length;j++)
 //         {
 
@@ -279,9 +279,9 @@
 //                 arr[j] = arr[j+1]
 //                 arr[j+1] = temp;
 //             }
-           
+
 //         }
-        
+
 //     }
 
 
@@ -294,18 +294,185 @@
 
 
 
-const palindrome = (name)=>{
-    const res = name.split("").reverse();
-    if(res.join("")===name){
-        return true
-    }else{
-        return false
-    }
-    
-  }
-  
-  console.log(palindrome("priya"));
+// const palindrome = (name)=>{
+//     const res = name.split("").reverse();
+//     if(res.join("")===name){
+//         return true
+//     }else{
+//         return false
+//     }
+
+//   }
+
+//   console.log(palindrome("priya"));
 
 
 
-  
+
+// const countVowels = (vowels)=>{
+//     vowels = vowels.toLowerCase()
+//     let count = 0;
+//     for (vow of vowels){
+//         if(vow.includes("a")|| vow.includes("e") || vow.includes("i")
+//             || vow.includes("o") || vow.includes("u")){
+//        count +=1
+//        }
+//     }
+
+//     return count
+// }
+
+
+
+// console.log(countVowels("HElloo World"))    //4
+// console.log(countVowels("PRIYA KARN"))
+
+
+
+
+
+
+
+// const countVowels = (vowels)=>{
+//     vowels = vowels.toLowerCase();
+//     let vowArray = ["a","e","i","o","u"]
+//     let count = 0;
+//     const splitWord = vowels.split("");
+//     for(v of splitWord){
+//         if(vowArray.includes(v) || vowArray.includes(v) || vowArray.includes(v) || vowArray.includes(v) || vowArray.includes(v)){
+//             count+=1;
+//         }
+//     }
+
+//     return count;
+//     }
+
+
+// console.log(countVowels("HElloo World"))    //4
+// console.log(countVowels("PRIYA KARN"))
+
+
+
+
+
+// const counter = {
+//     name : "priya",
+//     sum :  function add(){
+//         return `${2+3} and ${this.name}`
+//     }
+// }
+
+// console.log(counter.name)
+// console.log(counter.sum())
+
+
+// const reverseString = (reverStr)=>{
+//     const res = reverStr.split('').reverse()
+//     return res.join("")
+// }
+// console.log(reverseString("hello"))
+
+
+// Stack implementation:-
+
+// let arr = [10,20,30];
+// let top = arr.length-1;
+// let maxSize = 6;
+
+
+// const push = (num)=>{
+//     if(arr.length<maxSize){
+//         top = top+1;
+//         arr[top] = num
+//         return arr;
+//     }else{
+//         return "stack is full"
+//     }
+
+// }
+
+// const pop = ()=>{
+//     if(top>=0){
+//         arr.length = arr.length-1
+//         top-=1
+//         return arr
+//     }
+//     else{
+//         return "stack is empty"
+//     }
+
+// }
+
+// console.log(push(40))
+// console.log(push(50))
+// console.log(pop())
+// console.log(push(60))
+// console.log(push(60))
+// console.log(pop())
+
+
+
+// Searching :- linear searching and binary searching(used for large amount of data search)
+
+
+// 1. linear search:- is used to searching for small amount of data
+// we have to find particular element and their location from the array?.......
+
+// const arr = [10,20,30,40,50]
+
+// const searchElement = (num)=>{
+//     for(var i=0;i<arr.length;i++){
+//         if(arr[i] === num){
+//             var res = `${num} is found and their location is ${i}`
+//             break
+//         }else{
+//             res = "element is not found"
+//         }
+//     }
+//     return res
+// }
+
+// console.log(searchElement(0))
+
+
+
+
+
+// 2. binary search :- disadvantage:- data should be in order asc or desc. then work
+
+// const arr = [30,10, 50, 40, 20];   // find = 30 by binary search
+// arr.sort()
+// const searchElement = (num) => {
+//     var flag = 0;
+//     var lower = 0;
+//     var upper = arr.length - 1
+
+//     for (var i = 0; i < arr.length; i++) {
+//         let middle = Math.round((lower + upper) / 2)
+//         if (arr[middle] === num) {
+//             flag = 1;
+//             break;
+//         }
+
+//         if (num > arr[middle]) {
+//             lower = middle + 1
+//         }else{
+//             upper = middle-1
+//         }
+//     }
+
+//     if (flag === 1) {
+//         return `${num} is found`
+//     } else {
+//         return "not found"
+//     }
+// }
+
+
+// console.log(searchElement(20))
+
+
+
+
+
+

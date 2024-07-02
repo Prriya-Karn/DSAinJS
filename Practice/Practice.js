@@ -6693,15 +6693,19 @@ console.log("priya")
 
 
 
-const palindrome = (name)=>{
-  const res = name.split("");
-  // if(res.join()===name){
-  //   return true
-  // }else{
-  //   return false
-  // }
+// const palindrome = (name)=>{
+//   const res = name.split("");
+//   // if(res.join()===name){
+//   //   return true
+//   // }else{
+//   //   return false
+//   // }
 
-  return res.join()
-}
+//   return res.join()
+// }
 
-console.log(palindrome("racecar"));
+// console.log(palindrome("racecar"));
+
+
+
+
