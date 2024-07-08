@@ -736,10 +736,10 @@
 
 // 5. print linearly from n to 1  (but by Backtracking)
 
-const printNumBack = (n,i)=>{
-    if(i>n) return
-    printNumBack(n,i+1)
-    console.log(i)
-}
+// const printNumBack = (n,i)=>{
+//     if(i>n) return
+//     printNumBack(n,i+1)
+//     console.log(i)
+// }
 
-printNumBack(5,1)
+// printNumBack(5,1)
