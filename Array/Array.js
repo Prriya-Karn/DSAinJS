@@ -475,4 +475,205 @@
 
 
 
+// Sorting:-
+
+// const sorting = (arr)=>{
+//     let temp;
+//     for(var i=0;i<arr.length;i++){
+//         for(var j=i+1;j<arr.length;j++){
+//             if(arr[i]>arr[j]){
+//                 temp = arr[i]
+//                 arr[i] = arr[j]
+//                 arr[j] = temp
+//             }
+//         }
+//     }
+//     return arr
+// }
+
+// console.log(sorting([30,10,50,40,20]))
+
+
+
+
+// type 1:- bubble sort:-
+
+// const bubbleSort = (arr)=>{
+//     let currSize = arr.length;
+//     let temp;
+//     for(var i=0;i<currSize;i++){
+//         if(arr[i]>arr[i+1]){
+//             temp = arr[i+1]
+//             arr[i+1] = arr[i]
+//             arr[i] = temp
+//         }
+//         if(i==currSize-1){
+//             i=-1
+//             currSize -=1
+//         }
+//     }
+
+//     return arr;
+// }
+
+// console.log(bubbleSort([10,50,100,99,30,40,20]))
+
+
+
+
+// Selection sort:-
+
+// const SelectionSort = (arr)=>{
+//     let temp;
+//     let m;
+
+//     for(var i=0;i<arr.length-1;i++){
+//         m = i;
+
+//         for(var j=i+1;j<arr.length;j++){
+//             if(arr[m]>arr[j]){
+//                 m = j
+//             }
+//         }
+
+//         if(m!=i){
+//             temp = arr[m]
+//             arr[m] = arr[i]
+//             arr[i] = temp
+//         }
+        
+//     }
+
+//     return arr
+// }
+// console.log(SelectionSort([7,6,3,4,1]))
+
+
+
+
+// insertion sort:-
+
+// const insertionSort = (arr)=>{
+//     let temp;
+
+//     for(var i=1;i<arr.length;i++){
+//         for(var j=i-1;j>=0;j--){
+//             if(arr[i]<arr[j]){
+//                 temp = arr[i]
+//                 arr[i] = arr[j]
+//                 arr[j] = temp
+//             }
+//         }
+
+//         arr[j-1] = temp
+//     }
+// }
+// console.log(insertionSort([23,1,10,5,2]))
+
+
+
+
+
+// const insertionSort = (arr)=>{
+//     let temp;
+//     for(var i=1;i<arr.length;i++){
+//         let a = i
+//         let num = arr[i]
+//         for(var j=i-1;j>=0;j--){
+    
+//          if(num<arr[j]){
+//             temp = arr[i]
+//             arr[i] = arr[j]
+//             arr[j] = temp
+//          }
+//          i=i-1
+         
+            
+//         }
+
+//         i = a
+        
+//     }
+
+//     return arr;
+    
+// }
+
+// console.log(insertionSort([5, 4, 3, 2, 1]))
+
+
+
+// Merge Sort:-
+
+const merge = (arr,low,mid,high)=>{
+    let left = low
+    let right = mid+1
+    let temp = []
+    let i = 0
+    while (left <= mid && right <= high) {
+        if(arr[left]<=arr[right]){
+            temp[i] = arr[left]
+            left++
+        }else{
+            temp[i] = arr[right]
+            right++
+        }
+
+        i++
+    }
+
+    while(left<=mid){
+        temp[i] = arr[left];
+        left++
+        i++
+    }
+
+    while(right<=high){
+        temp[i] = arr[right]
+        right++
+        i++
+    }
+    for (let j = 0; j < temp.length; j++) {
+        arr[low + j] = temp[j];
+    }
+
+}
+
+
+
+
+const mergeSort = (arr,low,high)=>{
+
+    if(low!=high){
+        let mid = Math.floor((low + high)/2)
+        mergeSort(arr,low,mid)
+        mergeSort(arr,mid+1,high)
+    
+        merge(arr,low,mid,high)
+    }
+    else{
+        return low
+    }
+   
+}
+
+
+let arr = [3,1,2,4,1,5,2,6,4]
+mergeSort(arr,0,arr.length-1)
+
+console.log(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log(mergeSort([12,11,13,5,6,7]))
 
