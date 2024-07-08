@@ -603,77 +603,143 @@
 
 
 
-// Merge Sort:-
+// Merge Sort:- again do after 3 days without see the code 
 
-const merge = (arr,low,mid,high)=>{
-    let left = low
-    let right = mid+1
-    let temp = []
-    let i = 0
-    while (left <= mid && right <= high) {
-        if(arr[left]<=arr[right]){
-            temp[i] = arr[left]
-            left++
-        }else{
-            temp[i] = arr[right]
-            right++
-        }
+// const merge = (arr,low,mid,high)=>{
+//     let left = low
+//     let right = mid+1
+//     let temp = []
+//     let i = 0
+//     while (left <= mid && right <= high) {
+//         if(arr[left]<=arr[right]){
+//             temp[i] = arr[left]
+//             left++
+//         }else{
+//             temp[i] = arr[right]
+//             right++
+//         }
 
-        i++
-    }
+//         i++
+//     }
 
-    while(left<=mid){
-        temp[i] = arr[left];
-        left++
-        i++
-    }
+//     while(left<=mid){
+//         temp[i] = arr[left];
+//         left++
+//         i++
+//     }
 
-    while(right<=high){
-        temp[i] = arr[right]
-        right++
-        i++
-    }
-    for (let j = 0; j < temp.length; j++) {
-        arr[low + j] = temp[j];
-    }
+//     while(right<=high){
+//         temp[i] = arr[right]
+//         right++
+//         i++
+//     }
+//     for (let j = 0; j < temp.length; j++) {
+//         arr[low + j] = temp[j];
+//     }
 
-}
-
-
+// }
 
 
-const mergeSort = (arr,low,high)=>{
 
-    if(low!=high){
-        let mid = Math.floor((low + high)/2)
-        mergeSort(arr,low,mid)
-        mergeSort(arr,mid+1,high)
+
+// const mergeSort = (arr,low,high)=>{
+
+//     if(low!=high){
+//         let mid = Math.floor((low + high)/2)
+//         mergeSort(arr,low,mid)
+//         mergeSort(arr,mid+1,high)
     
-        merge(arr,low,mid,high)
-    }
-    else{
-        return low
-    }
+//         merge(arr,low,mid,high)
+//     }
+//     else{
+//         return low
+//     }
    
+// }
+
+
+// let arr = [12,11,13,5,6,7,0]
+// mergeSort(arr,0,arr.length-1)
+
+// console.log(arr)
+
+
+
+
+
+// learning recursion working flow:-
+// eg:- print 0 to 3
+// var count = 0;
+// const recursionFun = ()=>{
+//     if(count === 4) return
+//     console.log(count)
+//     count++
+
+//     recursionFun()
+// }
+
+// recursionFun()
+
+
+
+// Basic recursion problem:-
+
+// 1. print name n times
+
+
+// const printName = (count,n)=>{
+//     if(count==n) return
+//     console.log(`${count+1 + " priya karn"}`);
+//     count++
+
+//     printName(count,n)
+// }
+
+// printName(0,5);
+
+
+
+// 2. print linearly from 1 to n
+
+// const printNum = (i,n)=>{
+//     if(i>n) return
+//     console.log(i)
+//     printNum(i+1,n)
+// }
+
+// printNum(1,10)
+
+
+
+// 3. print n to 1
+
+// const printNum = (n,i)=>{
+//     if(n<i) return
+//     console.log(n)
+//     printNum(n-1,i)
+// }
+
+// printNum(10,1)
+
+
+// 4. print linearly from 1 to n  (but by Backtracking)
+
+// const printNumBack = (i,n)=>{
+//     if(i<=0) return
+//     printNumBack(i-1,n)
+//     console.log(i)
+// }
+
+// printNumBack(5,5)
+
+
+
+// 5. print linearly from n to 1  (but by Backtracking)
+
+const printNumBack = (n,i)=>{
+    if(i>n) return
+    printNumBack(n,i+1)
+    console.log(i)
 }
 
-
-let arr = [3,1,2,4,1,5,2,6,4]
-mergeSort(arr,0,arr.length-1)
-
-console.log(arr)
-
-
-
-
-
-
-
-
-
-
-
-
-
-// console.log(mergeSort([12,11,13,5,6,7]))
-
+printNumBack(5,1)
