@@ -743,3 +743,100 @@
 // }
 
 // printNumBack(5,1)
+
+
+// var i = 2
+// var arr = [1,2]
+// var climbStairs = function(n) {
+//     if(i>=n) return arr[n-1]
+   
+//    arr[i] = arr[i-1] + arr[i-2]
+//    i++
+//    return climbStairs(n)    
+// };   
+
+
+// console.log(climbStairs(5))
+
+
+
+
+// Queue FIFO:-
+
+
+var arr = []
+
+var front = 0
+var rear = 0
+var count = 0
+
+
+const push = (num)=>{
+arr.length = 5;
+n = arr.length;
+    if(count>=n)
+        return "queue is full"
+    
+    arr[rear%n] = num
+        count++
+        rear++
+        arr.length = rear
+        return arr
+}
+
+const pop = ()=>{
+    if(count<=0){
+        return "queue is empty now"
+    }
+ arr[front%n] = -1
+ front++ 
+ count--
+
+ return arr
+}
+
+
+const top = ()=>{
+    // top is always those element that is first enter in the array
+    // and in short way front is always top value
+    var t = arr[front]
+    return t
+}
+
+
+console.log(arr)
+console.log(push(10))
+console.log(push(20))
+console.log(push(30))
+console.log(push(40))
+console.log(push(50))
+console.log(push(60))
+
+console.log(top())
+ console.log(pop())
+console.log(push(60))
+console.log(top())
+console.log(pop())
+ console.log(push(0))
+console.log(pop())
+console.log(pop())
+console.log(push(10))
+
+// for(var i=front+1;i<arr.length+2;i++){
+//     if(arr[i%n]!=-1){
+//         console.log(arr[i%n])
+//     }
+  
+// }
+
+
+// console.log(pop())
+// console.log(pop())
+// console.log(pop())
+// console.log(pop())
+// console.log(pop())
+// console.log(pop())
+
+// console.log(0%5)
+// console.log(5%5)
+
