@@ -764,63 +764,63 @@
 // Queue FIFO:-
 
 
-var arr = []
+// var arr = []
 
-var front = 0
-var rear = 0
-var count = 0
+// var front = 0
+// var rear = 0
+// var count = 0
 
 
-const push = (num)=>{
-arr.length = 5;
-n = arr.length;
-    if(count>=n)
-        return "queue is full"
+// const push = (num)=>{
+// arr.length = 5;
+// n = arr.length;
+//     if(count>=n)
+//         return "queue is full"
     
-    arr[rear%n] = num
-        count++
-        rear++
-        arr.length = rear
-        return arr
-}
+//     arr[rear%n] = num
+//         count++
+//         rear++
+//         arr.length = rear
+//         return arr
+// }
 
-const pop = ()=>{
-    if(count<=0){
-        return "queue is empty now"
-    }
- arr[front%n] = -1
- front++ 
- count--
+// const pop = ()=>{
+//     if(count<=0){
+//         return "queue is empty now"
+//     }
+//  arr[front%n] = -1
+//  front++ 
+//  count--
 
- return arr
-}
-
-
-const top = ()=>{
-    // top is always those element that is first enter in the array
-    // and in short way front is always top value
-    var t = arr[front]
-    return t
-}
+//  return arr
+// }
 
 
-console.log(arr)
-console.log(push(10))
-console.log(push(20))
-console.log(push(30))
-console.log(push(40))
-console.log(push(50))
-console.log(push(60))
+// const top = ()=>{
+//     // top is always those element that is first enter in the array
+//     // and in short way front is always top value
+//     var t = arr[front]
+//     return t
+// }
 
-console.log(top())
- console.log(pop())
-console.log(push(60))
-console.log(top())
-console.log(pop())
- console.log(push(0))
-console.log(pop())
-console.log(pop())
-console.log(push(10))
+
+// console.log(arr)
+// console.log(push(10))
+// console.log(push(20))
+// console.log(push(30))
+// console.log(push(40))
+// console.log(push(50))
+// console.log(push(60))
+
+// console.log(top())
+//  console.log(pop())
+// console.log(push(60))
+// console.log(top())
+// console.log(pop())
+//  console.log(push(0))
+// console.log(pop())
+// console.log(pop())
+// console.log(push(10))
 
 // for(var i=front+1;i<arr.length+2;i++){
 //     if(arr[i%n]!=-1){
@@ -840,3 +840,120 @@ console.log(push(10))
 // console.log(0%5)
 // console.log(5%5)
 
+
+
+
+
+
+// const generateBarChart = (arr)=>{
+//     // var takeData = 0;
+//     // var i;
+//     // while(takeData<arr.length){
+//     //     i = takeData
+//     //     var star = "";
+//     //     for(var a = 1;a<=arr[i];a++){
+//     //         star = star + "*"
+//     //     }
+//     //     console.log(i+1 + ":" + star)
+//     //     takeData++
+//     // }
+
+
+//     // or
+
+// var obj = {}
+// var stararr = []
+
+// for(var i=0;i<arr.length;i++){
+//     var j = 0;
+//     var star = ""
+//   while(j<arr[i]){
+//     star = star + "*"
+//     j++
+//   }
+//   stararr.push(star)
+// }
+
+// for(var i=0;i<arr.length;i++){
+//     obj[i+1] =  stararr[i] 
+// }
+
+
+// return obj;
+
+// }
+
+// console.log(generateBarChart([5,3,9,2]))
+
+// 1: *****
+// 2: ***
+// 3: ********* 
+// 4: **
+
+// const obje = {
+
+// }
+
+// obje[0]="priya"
+// console.log(obje)
+
+
+
+
+// decimal(base 10) to binary base(2) conversion
+
+// const binary = (num)=>{
+//     var fres = []
+//     var i = 0;
+//     var res;
+//     var a = 1;
+//     while(a>0){
+//         res = num%2
+//         a = Math.floor(num/2)
+//         fres[i] = res
+//         i++
+//         num = a
+//     }
+
+//     for(var j=fres.length-1;j>=0;j--){
+//         console.log(fres[j])
+//     }
+// }
+
+// binary(11)
+
+
+
+// binary (base 2) to decimal
+
+// const decimal = (num)=>{
+//     var arr = []
+//     var i = 0;
+//     var x;
+//     var fres;
+//     var result = 0;
+//     while(num!=0){
+//         x = num%10
+//         num = Math.floor(num/10)
+//         arr[i] = x
+//         i++
+//     }
+
+//     for(var j= arr.length-1;j>=0;j--){
+//         fres = 2**j
+//         result = result + arr[j]*fres
+//     }
+//     console.log(result)
+// }
+
+
+// decimal(111)
+
+
+var arr = [7,20,1]
+arr.sort((a,b)=>{
+   if(a>b){
+    return b-a
+   }
+})
+console.log(arr)
