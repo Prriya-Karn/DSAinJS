@@ -665,9 +665,65 @@
 
 
 
+// Revision
+
+// const swap = (arr,l,mid,h)=>{
+   
+//    var temp;
+//    for(l;l<=h;l++){
+//       mid =  l+1;
+//       for(mid;mid<=h;mid++){
+//          if(arr[l]>arr[mid]){
+//             temp = arr[mid]
+//             arr[mid] = arr[l]
+//             arr[l] = temp
+//          }
+//       }
+//    }
+//    return arr;
+// }
+
+// const mergeSort = (arr,l,h)=>{
+//    if(l!=h){
+//       var mid = Math.floor((l+h)/2);
+//       mergeSort(arr,l,mid);
+//       mergeSort(arr,mid+1,h);
+//       swap(arr,l,mid,h);
+   
+//       return arr;
+//    }else{
+//       return l;
+      
+
+//    }
+   
+// }
 
 
-// learning recursion working flow:-
+
+
+
+let arr = [12,11,13,5,6,7,0,200,13,2,7];
+console.log(mergeSort(arr,0,arr.length-1));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------- learning recursion working flow:-
 // eg:- print 0 to 3
 // var count = 0;
 // const recursionFun = ()=>{
@@ -950,10 +1006,3 @@
 // decimal(111)
 
 
-var arr = [7,20,1]
-arr.sort((a,b)=>{
-   if(a>b){
-    return b-a
-   }
-})
-console.log(arr)
