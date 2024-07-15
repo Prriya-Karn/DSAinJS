@@ -1018,3 +1018,146 @@
 // })
 
 // console.log(res)
+
+
+
+
+
+
+
+//---------------------------------- Linked List------------------------------------
+
+// Array have fixed size. 
+// In memory Element stores in the contiguous location 
+// we cannot increase or decrease size of the array.
+// cannot add more memory because array have fixed size.
+// Array is easy to traverse indexed because it have contiguous memory location.
+
+// while in Linkedlist data structure element not store in the memory at contiguous 
+// location.
+// in linkedlist we can add element remove element.
+
+
+
+
+// creating the node:-
+
+// const node1 = {
+//     data:10,
+//     next:null
+// }
+
+// const node2 = {
+//     data : 20,
+//     next :  null
+// }
+
+// const node3 = {
+//     data : 30,
+//     next : null
+// }
+
+// node1.next = node2.data;
+// node2.next = node3.data;
+
+// console.log(node2);
+
+
+// // Function to create a new node
+// function createNode(data) {
+//     return {
+//       data: data,
+//       next: null
+//     };
+//   }
+  
+//   // Function to append a node to the list
+//   function append(head, data) {
+//     const newNode = createNode(data);
+//     if (head === null) {
+//       return newNode; // If the list is empty, the new node becomes the head
+//     } else {
+//       var current = head;
+//     //   return head.next,current.next
+//       while (current.next !== null) {
+//         current = current.next; // Traverse to the end of the list
+//       }
+//       current.next = newNode; // Link the last node to the new node
+//     }
+   
+//    return head;
+//   }
+  
+//   // Function to print the list
+//   function printList(head) {
+//     let current = head;
+//     while (current !== null) {
+//       console.log(current.data);
+//       current = current.next;
+//     }
+//   }
+  
+  // Using the functions to create and manage the linked list
+//   let head = null;
+// head = append(head, 10);
+// head = append(head, 20);
+// head = append(head, 30);
+// console.log(head)
+  
+// printList(head); // Output: 10, 20, 30
+  
+
+
+// In js linked list very important note:-   
+
+// The key point is that current is initially set to reference the same
+//  object as head. When we modify current.next, the changes are reflected in 
+//  head because both current and head are references to the same object. 
+
+
+
+const createNode = (data)=>{
+    return{
+        data : data,
+        next : null
+    }
+}
+
+
+
+const linkedlist = (head,data) =>{
+  let newNode = createNode(data);
+  if(head==null){
+    return newNode;
+  }
+  else{
+    let current = head;
+    while(current.next!==null){
+      current = current.next;
+    }
+    current.next = newNode;
+    
+  }
+  return head;
+}
+
+
+const printEle = (head)=>{
+  let current = head;
+  while(current!=null){
+    console.log(current.data);
+    current = current.next;
+  }
+ 
+}
+
+let head = null
+head = linkedlist(head,10);
+head = linkedlist(head,20);
+head = linkedlist(head,30);
+console.log(head);
+
+
+printEle(head);
+
+
