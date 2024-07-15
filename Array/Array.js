@@ -703,8 +703,8 @@
 
 
 
-let arr = [12,11,13,5,6,7,0,200,13,2,7];
-console.log(mergeSort(arr,0,arr.length-1));
+// let arr = [12,11,13,5,6,7,0,200,13,2,7];
+// console.log(mergeSort(arr,0,arr.length-1));
 
 
 
@@ -1006,3 +1006,15 @@ console.log(mergeSort(arr,0,arr.length-1));
 // decimal(111)
 
 
+
+
+
+
+// var arr1 = [2,20,1];
+// const res = arr1.sort((a,b)=>{
+//    if(a>b){
+//       return b-a
+//    }
+// })
+
+// console.log(res)
