@@ -1116,48 +1116,220 @@
 
 
 
+// const createNode = (data)=>{
+//     return{
+//         data : data,
+//         next : null
+//     }
+// }
+
+
+
+// const linkedlist = (head,data) =>{
+//   let newNode = createNode(data);
+//   if(head==null){
+//     return newNode;
+//   }
+//   else{
+//     let current = head;
+//     while(current.next!==null){
+//       current = current.next;
+//     }
+//     current.next = newNode;
+    
+//   }
+//   return head;
+// }
+
+
+// const printEle = (head)=>{
+//   let current = head;
+//   while(current!=null){
+//     console.log(current.data);
+//     current = current.next;
+//   }
+ 
+// }
+
+// let head = null
+// head = linkedlist(head,10);
+// head = linkedlist(head,20);
+// head = linkedlist(head,30);
+// console.log(head);
+
+
+// printEle(head);
+
+
+
+
+
+
+//Question:-
+// conver the array(fixed size) into linked list and 
+// return the head in the linked list.
+
+
+// const createNode = (data)=>{
+//   return{
+//     data:data,
+//     next:null
+//   }
+// }
+
+// const linkedList = (head,data)=>{
+//   let newNode = createNode(data);
+//   if(head==null){
+//     return newNode;
+//   }else{
+//     let current = head;
+//     while(current.next!=null){
+//       current = current.next;
+//     }
+//     current.next = newNode;
+//   }
+
+//   return head;
+
+// }
+
+// let searchEle = 100;
+
+// const printList = (head)=>{
+//   let count = 0;
+//   let res;
+//   if(head!=null){
+//     let current = head;
+//     while(current!=null){
+//       if(current.data==searchEle){
+//         console.log(`yes ${searchEle} is available in list`);
+//         break;
+//       }
+//       // count++;
+//       current = current.next;
+//      }
+//     //  console.log(head.data);
+//   }
+//   // console.log(`length of the linked list is : ${count}`);
+// }
+
+
+
+
+
+// let arr = [12,1,3,8,10,20];
+// let head = null;
+
+// for(var i=0;i<arr.length;i++){
+//   data = arr[i];
+//   head = linkedList(head,data);
+// }
+
+// printList(head);
+
+
+
+// //Question:-
+// Delete the head and tail of the ll
+
 const createNode = (data)=>{
-    return{
-        data : data,
-        next : null
-    }
+  return{
+    data : data,
+    next : null
+  }
 }
 
 
 
-const linkedlist = (head,data) =>{
-  let newNode = createNode(data);
+const linkedList = (head,data)=>{
+  var newNode = createNode(data);
+  
   if(head==null){
     return newNode;
   }
   else{
     let current = head;
-    while(current.next!==null){
+    while(current.next!=null){
       current = current.next;
+     
     }
     current.next = newNode;
-    
-  }
-  return head;
+  
+   }
+
+return head;
 }
 
 
-const printEle = (head)=>{
+const print = (head)=>{
+  var count = 0;
   let current = head;
+
   while(current!=null){
-    console.log(current.data);
-    current = current.next;
+    console.log(current.data)
+    count++;
+    current = current.next;   
   }
- 
+  console.log(count)
 }
 
-let head = null
-head = linkedlist(head,10);
-head = linkedlist(head,20);
-head = linkedlist(head,30);
-console.log(head);
+let head = null;
+head = linkedList(head,10);
+head = linkedList(head,20);
+head = linkedList(head,30);
+head = linkedList(head,40);
 
 
-printEle(head);
+const deleteKthEle = (head,k)=>{
+  let temp = head;
+  let count = 1;
+  while(count!=k){
+    temp = temp.next;
+    count+=1;
+  }
+  temp.data = temp.next.data;
+  temp.next = null;
+  return head
+}
+
+head = deleteKthEle(head,4)
+
+console.log(head)
+
+
+
+
+// console.log(head)
+
+// const deleteTail = (head)=>{
+//   if(head==null || head.next==null) return null;
+//   let temp = head;
+//   while(temp.next.next!=null){
+//     temp = temp.next;
+//   }
+//   temp.next = null;
+//   return head;    //because temp and head refer same object and changing temp also reflect in head.
+// }
+
+// head = deleteTail(head);
+// console.log(head);
+
+
+// const deleteHEAD = (head)=>{
+//   if(head==null) return head;
+//   let temp = head;
+//   delete(temp)
+//   head = head.next;
+//   return head;
+// }
+// head = deleteHEAD(head);
+// console.log(head)
+
+print(head);
+
+
+
+
+
 
 
